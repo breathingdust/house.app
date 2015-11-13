@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('houseApp')
+    .module('house.api')
     .config(routeConfig);
 
   function routeConfig($routeProvider) {

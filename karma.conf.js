@@ -37,7 +37,7 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
-      moduleName: 'houseApp'
+      moduleName: 'house.api'
     },
 
     logLevel: 'WARN',

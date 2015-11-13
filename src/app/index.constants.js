@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('houseApp')
+    .module('house.api')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

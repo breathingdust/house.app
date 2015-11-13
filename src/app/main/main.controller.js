@@ -2,17 +2,18 @@
   'use strict';
 
   angular
-    .module('houseApp')
+    .module('house.api')
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, transactionService) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1446399488944;
     vm.showToastr = showToastr;
+    vm.transactions = [];
 
     activate();
 
@@ -21,6 +22,11 @@
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
       }, 4000);
+
+      transactionService.getTransactions()
+      .success(function (transactions) {
+                vm.transactions = transactions
+            });
     }
 
     function showToastr() {

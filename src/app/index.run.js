@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('houseApp')
+    .module('house.api')
     .run(runBlock);
 
   /** @ngInject */
